@@ -1,5 +1,34 @@
 Testes E2E com Cypress no AutomationExercise
 
+Passo a passo rápido para rodar os testes localmente:
+# 1) Clone o repositório
+git clone https://github.com/jenafree/ecommerce-cypress-tests.git
+
+# 2) Acesse a pasta do projeto
+cd ecommerce-cypress-tests
+
+# 3) Abra no VS Code (opcional)
+code .
+
+# 4) Instale as dependências
+npm install
+# ou yarn install
+
+# 5) Instale o Cypress (apenas na primeira vez)
+npx cypress install
+
+# 6) Execute em modo interativo
+npm run cy:open
+
+# 7) Execute headless no Chrome
+npm run cy:chrome:headless
+
+
+
+
+
+
+
 Este projeto contém a automação de fluxos críticos (registro, login, carrinho, checkout, avaliações e muito mais) para o site AutomationExercise, utilizando o framework Cypress e o padrão Page Object Model.
 
 📋 Pré-requisitos
