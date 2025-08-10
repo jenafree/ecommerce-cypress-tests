@@ -1,35 +1,41 @@
-{  
+{
   "name": "qa-ecommerce-automationexercise",
   "version": "1.0.0",
   "description": "Projeto de testes E2E com Cypress para o site AutomationExercise",
   "main": "index.js",
-  "scripts": {   
+  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install",
+    "lint": "eslint . --ext .js,.ts,.jsx,.tsx",
+    "lint:fix": "eslint . --ext .js,.ts,.jsx,.tsx --fix",
     "cy:open": "npx cypress open",
     "cy:chrome:headed": "npx cypress run --browser chrome --headed",
     "cy:chrome:headless": "npx cypress run --browser chrome",
-     "cy:firefox:headed": "npx cypress run --browser firefox --headed",
-
+    "cy:firefox:headed": "npx cypress run --browser firefox --headed",
     "cy:cloud": ""
   },
-
-
   "author": "Neftali Oliveira",
-  
   "license": "ISC",
-
   "devDependencies": {
-  
     "@faker-js/faker": "^8.0.2",
-
-       "@testing-library/cypress": "^9.0.0",
-
+    "@testing-library/cypress": "^9.0.0",
     "cy-verify-downloads": "^0.1.15",
-   
     "cypress": "^12.14.0",
-
-        "cypress-downloadfile": "^1.2.3",
-
-    "cypress-iframe": "^1.0.1"
+    "cypress-downloadfile": "^1.2.3",
+    "cypress-iframe": "^1.0.1",
+    "eslint": "^9.33.0",
+    "eslint-plugin-cypress": "^5.1.0",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-n": "^17.21.3",
+    "eslint-plugin-no-comments": "^1.1.10",
+    "eslint-plugin-promise": "^7.2.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.5",
+    "strip-comments": "^2.0.1"
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx}": [
+      "eslint --fix"
+    ]
   }
 }

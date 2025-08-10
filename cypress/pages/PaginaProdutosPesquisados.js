@@ -1,4 +1,4 @@
-class SearchedProductsPage{
+class PaginaProdutosPesquisados{
   getAddToCartBtn(){
     return cy.get('div.productinfo.text-center a[data-product-id="5"]').contains('Add to cart');
   }
@@ -8,4 +8,4 @@ class SearchedProductsPage{
   }
 }
 
-export default new SearchedProductsPage();
+export default new PaginaProdutosPesquisados();

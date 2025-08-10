@@ -1,6 +1,6 @@
-class AllProductsPage{
+class PaginaTodosProdutos{
   getAllProductsLink(){
-    return cy.get('ol.breadcrumb li a[href="/products"').contains("Products");
+    return cy.get('ol.breadcrumb li a[href="/products"').contains('Products');
   }
 
   getFirstProduct(){
@@ -40,4 +40,4 @@ class AllProductsPage{
   }
 }
 
-export default new AllProductsPage();
+export default new PaginaTodosProdutos();
