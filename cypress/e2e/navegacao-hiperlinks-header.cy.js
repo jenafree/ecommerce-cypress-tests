@@ -2,15 +2,15 @@
 
 import HeaderPage from "../pages/HeaderPage";
 
-describe("Header hyperlinks navigation test suite", () => {
-  it("Home page hyperlink test", () => {
+describe("Navegação por hyperlinks do header", () => {
+  it("Link da página inicial", () => {
     HeaderPage.getHomeLink().click();
     cy.get("div.col-sm-6 h2")
       .contains("Full-Fledged practice website ")
       .should("be.visible");
   });
 
-  it("All products page hyperlink test", () => {
+  it("Link de Todos os Produtos", () => {
     HeaderPage.getProductsLink().click();
     cy.get("div.features_items h2.title.text-center")
       .scrollIntoView()
@@ -24,17 +24,17 @@ describe("Header hyperlinks navigation test suite", () => {
         });
       });
   });
-  it("Cart page hyperlink test", () => {
+  it("Link do Carrinho", () => {
     HeaderPage.getCartLink().click();
     cy.get("p.text-center b").contains("Cart is empty!").should("be.visible");
   });
 
-  it("Signup/Login page hyperlink test", () => {
+  it("Link de Cadastro/Login", () => {
     HeaderPage.getSignupLink().click();
     cy.get("h2").contains("New User Signup!").should("be.visible");
   });
 
-  it("Test Cases page hyperlink test", () => {
+  it("Link de Test Cases", () => {
     HeaderPage.getTestCaseLink().click();
     cy.get("div.col-sm-9 h2.title.text-center")
       .scrollIntoView()
@@ -54,7 +54,7 @@ describe("Header hyperlinks navigation test suite", () => {
       .should("exist");
   });
 
-  it("API Testing page hyperlink test", () => {
+  it("Link de API Testing", () => {
     HeaderPage.getApiTestLink().click();
     cy.get("div.col-sm-9 h2.title.text-center")
       .scrollIntoView()
@@ -69,7 +69,7 @@ describe("Header hyperlinks navigation test suite", () => {
       });
   });
 
-  it("Video Tutorials page hyperlink test", () => {
+  it("Link de Video Tutorials", () => {
     HeaderPage.getVideoTutorialLink().click();
     cy.origin("https://consent.youtube.com", () => {
       cy.visit("https://www.youtube.com/c/AutomationExercise");
@@ -85,7 +85,7 @@ describe("Header hyperlinks navigation test suite", () => {
     });
   });
 
-  it("Contact us page hyperlink test", () => {
+  it("Link de Fale Conosco", () => {
     HeaderPage.getContactUsLink().click();
     cy.get("div.col-sm-12 h2")
       .scrollIntoView()

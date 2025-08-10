@@ -47,7 +47,7 @@ const randomYearNumber = faker.helpers.rangeToNumber({
   max: 2030,
 });
 
-describe("Place order and login while checkout test suite", () => {
+describe("Fazer pedido e logar antes do checkout", () => {
   beforeEach(() => {
     HeaderPage.getSignupLink().click();
     AuthPage.getSignupTitle().should("exist");
@@ -84,7 +84,7 @@ describe("Place order and login while checkout test suite", () => {
     HeaderPage.getLogoutLink().click();
   });
 
-  it("Place order and login before checkout test", () => {
+  it("Fazer pedido e logar antes do checkout", () => {
     AuthPage.login(loginEmail, loginPassword);
     cy.get("ul.nav.navbar-nav li:nth-child(10) a")
       .contains(` Logged in as `)

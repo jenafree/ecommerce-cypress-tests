@@ -2,22 +2,22 @@
 
 import TopCarouselHomePage from "../pages/TopCarouselHomePage";
 
-describe("Carousel arrows functionality in recommended items test suite", () => {
-  it("Prev arrow carousel test", () => {
+describe("Funcionalidade das setas no carrossel de itens recomendados", () => {
+  it("Teste da seta Anterior do carrossel", () => {
     TopCarouselHomePage.getBottomPrevArrow().scrollIntoView().click();
     cy.get('img[src="get_product_picture/4"]').should("exist");
     cy.get('img[src="get_product_picture/5"]').should("exist");
     cy.get('img[src="get_product_picture/6"]').should("exist");
   });
 
-  it("Next arrow carousel test", () => {
+  it("Teste da seta Próxima do carrossel", () => {
     TopCarouselHomePage.getBottomNextArrow().scrollIntoView().click();
     cy.get('img[src="get_product_picture/4"]').should("exist");
     cy.get('img[src="get_product_picture/5"]').should("exist");
     cy.get('img[src="get_product_picture/6"]').should("exist");
   });
 
-  it("Next and Prev arrows carousel test", () => {
+  it("Teste das setas Próxima e Anterior do carrossel", () => {
     TopCarouselHomePage.getBottomNextArrow().scrollIntoView().click();
     cy.get('img[src="get_product_picture/4"]').should("exist");
     cy.get('img[src="get_product_picture/5"]').should("exist");

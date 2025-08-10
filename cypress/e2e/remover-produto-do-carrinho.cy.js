@@ -5,9 +5,9 @@ import AllProductsPage from "../pages/AllProductsPage";
 import ThirdProductPage from "../pages/ThirdProductPage";
 import CartPage from "../pages/CartPage";
 
-describe("Delete product from cart page test suite", () => {
+describe("Remover produto do carrinho", () => {
 
-  it("Delete product from cart page test", () => {
+  it("Remover produto do carrinho", () => {
     HeaderPage.getProductsLink().click();
     AllProductsPage.getThirdProduct().click();
     cy.get('div.product-information h2').contains('Sleeveless Dress').should('be.visible');

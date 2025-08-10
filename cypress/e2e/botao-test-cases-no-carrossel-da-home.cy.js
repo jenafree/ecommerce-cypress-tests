@@ -2,8 +2,8 @@
 
 import CarouselHomePage from "../pages/CarouselHomePage";
 
-describe("Test Cases button functionality in carousel home page test suite", () => {
-  it("Test Cases button functionality located in first carousel image test", () => {
+describe("Funcionalidade do botão Test Cases no carrossel da home", () => {
+  it("Botão Test Cases na primeira imagem do carrossel", () => {
     CarouselHomePage.getFirstTestCaseBtn().click();
     cy.get("div.col-sm-9 h2.title.text-center")
       .scrollIntoView()
@@ -23,7 +23,7 @@ describe("Test Cases button functionality in carousel home page test suite", () 
       .should("exist");
   });
 
-  it("Test Cases button functionality located in second carousel image test", () => {
+  it("Botão Test Cases na segunda imagem do carrossel", () => {
     CarouselHomePage.getSecondTestCaseBtn().click();
     cy.get("div.col-sm-9 h2.title.text-center")
       .scrollIntoView()
@@ -42,7 +42,7 @@ describe("Test Cases button functionality in carousel home page test suite", () 
       )
       .should("exist");
   });
-  it("Test Cases button functionality located in third carousel image test", () => {
+  it("Botão Test Cases na terceira imagem do carrossel", () => {
     CarouselHomePage.getThirdTestCaseBtn().click();
     cy.get("div.col-sm-9 h2.title.text-center")
       .scrollIntoView()

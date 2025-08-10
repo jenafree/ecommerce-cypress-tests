@@ -3,9 +3,9 @@
 import HomeCategoryLinksPage from "../pages/HomeCategoryLinksPage";
 import DressCategoryPage from "../pages/DressCategoryPage";
 
-describe("Verify category products test suite", () => {
+describe("Verificar produtos por categoria", () => {
 
-  it("Verify category products test", () => {
+  it("Verificar produtos por categoria", () => {
     cy.get("h4.panel-title a").should(($as) => {
       expect($as).to.have.length(3);
       expect($as[0]).to.have.attr("href", "#Women");

@@ -48,7 +48,7 @@ const randomYearNumber = faker.helpers.rangeToNumber({
   max: 2030,
 });
 
-describe("Place order and login while checkout test suite", () => {
+describe("Fazer pedido e logar durante o checkout", () => {
   beforeEach(() => {
     HeaderPage.getSignupLink().click();
     AuthPage.getSignupTitle().should("exist");
@@ -85,7 +85,7 @@ describe("Place order and login while checkout test suite", () => {
     HeaderPage.getLogoutLink().click();
   });
 
-  it("Place order and login while checkout test", () => {
+  it("Fazer pedido e logar durante o checkout", () => {
     HeaderPage.getProductsLink().click();
     AllProductsPage.getAddFirstProduct().click();
     AllProductsPage.getContinueShoppingBtn().click();
@@ -206,7 +206,7 @@ describe("Place order and login while checkout test suite", () => {
       .should("be.visible");
   });
 
-  it("Try to place order with no card name inserted in card name field test", () => {
+  it("Tentar finalizar sem preencher o nome no cartão", () => {
     HeaderPage.getProductsLink().click();
     AllProductsPage.getAddFirstProduct().click();
     AllProductsPage.getContinueShoppingBtn().click();
@@ -323,7 +323,7 @@ describe("Place order and login while checkout test suite", () => {
       .should("be.visible");
   });
 
-  it("Try to place order with no card number inserted in card number field test", () => {
+  it("Tentar finalizar sem preencher o número do cartão", () => {
     HeaderPage.getProductsLink().click();
     AllProductsPage.getAddFirstProduct().click();
     AllProductsPage.getContinueShoppingBtn().click();
@@ -440,7 +440,7 @@ describe("Place order and login while checkout test suite", () => {
       .should("be.visible");
   });
 
-  it("Try to place order with no CVC inserted in CVC field test", () => {
+  it("Tentar finalizar sem preencher o CVC", () => {
     HeaderPage.getProductsLink().click();
     AllProductsPage.getAddFirstProduct().click();
     AllProductsPage.getContinueShoppingBtn().click();
@@ -556,7 +556,7 @@ describe("Place order and login while checkout test suite", () => {
       .contains("Your account has been permanently deleted!")
       .should("be.visible");
   });
-  it("Place order with month inserted in expiration month field test", () => {
+  it("Finalizar com apenas o mês preenchido (expiração)", () => {
       HeaderPage.getProductsLink().click();
       AllProductsPage.getAddFirstProduct().click();
       AllProductsPage.getContinueShoppingBtn().click();
@@ -673,7 +673,7 @@ describe("Place order and login while checkout test suite", () => {
         .should("be.visible");
     });
 
-  it("Try to place order with no year inserted in expiration year field test", () => {
+  it("Tentar finalizar sem preencher o ano (expiração)", () => {
     HeaderPage.getProductsLink().click();
     AllProductsPage.getAddFirstProduct().click();
     AllProductsPage.getContinueShoppingBtn().click();
@@ -790,7 +790,7 @@ describe("Place order and login while checkout test suite", () => {
       .should("be.visible");
   });
 
-  it.only("Try to place order with no required field filled in payment page test", () => {
+  it.only("Tentar finalizar sem preencher campos obrigatórios na página de pagamento", () => {
     HeaderPage.getProductsLink().click();
     AllProductsPage.getAddFirstProduct().click();
     AllProductsPage.getContinueShoppingBtn().click();

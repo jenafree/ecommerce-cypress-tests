@@ -2,8 +2,8 @@
 
 import FooterPage from "../pages/FooterPage";
 
-describe("Scroll up without 'arrow' button test suite", () => {
-  it("Scroll up using 'arrow' button test", () => {
+describe("Rolar para cima sem o botão 'seta'", () => {
+  it("Rolar para cima usando o botão 'seta'", () => {
     FooterPage.getFooter().scrollIntoView();
     cy.get('div.single-widget h2').contains('Subscription').should('be.visible');
     FooterPage.getTopCarousel().scrollIntoView();

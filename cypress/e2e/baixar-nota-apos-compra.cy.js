@@ -49,7 +49,7 @@ const randomYearNumber = faker.helpers.rangeToNumber({
   max: 2030,
 });
 
-describe("Download invoice after purchase test suite", () => {
+describe("Baixar nota após a compra", () => {
   before(() => {
     cy.visit("https://www.automationexercise.com/");
     HeaderPage.getSignupLink().click();
@@ -87,7 +87,7 @@ describe("Download invoice after purchase test suite", () => {
     HeaderPage.getLogoutLink().click();
   });
 
-  it("Download invoice after purchase test", () => {
+  it("Baixar nota após a compra", () => {
     HeaderPage.getProductsLink().click();
     AllProductsPage.getAddFirstProduct().click();
     AllProductsPage.getContinueShoppingBtn().click();

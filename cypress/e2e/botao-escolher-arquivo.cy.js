@@ -17,7 +17,7 @@ const txtFile = "test.txt";
 const pptFile = "test.pptx";
 const zipFile = "test.zip";
 
-describe("Choose file functionality with different type of documents test suite", () => {
+describe("Funcionalidade de enviar arquivo com diferentes tipos de documentos", () => {
   
   beforeEach(()=> {
     HeaderPage.getContactUsLink().click();
@@ -38,7 +38,7 @@ describe("Choose file functionality with different type of documents test suite"
     ContactUsPage.getParagraphField().type(randomParagraph, { delay: 0 });
   });
   
-  it("Choose file with Word test", () => {
+  it("Enviar arquivo Word", () => {
     
     ContactUsPage.getChooseFileBtn().selectFile("cypress/fixtures/" + wordFile);
     ContactUsPage.getSubmitBtn().click();
@@ -47,7 +47,7 @@ describe("Choose file functionality with different type of documents test suite"
       .should("be.visible");
   });
 
-  it("Choose file with JPG document test", () => {
+  it("Enviar arquivo JPG", () => {
     
     ContactUsPage.getChooseFileBtn().selectFile("cypress/fixtures/" + jpgFile);
     ContactUsPage.getSubmitBtn().click();
@@ -56,7 +56,7 @@ describe("Choose file functionality with different type of documents test suite"
       .should("be.visible");
   });
 
-  it("Choose file with PDF document test", () => {
+  it("Enviar arquivo PDF", () => {
     
     ContactUsPage.getChooseFileBtn().selectFile("cypress/fixtures/" + pdfFile);
     ContactUsPage.getSubmitBtn().click();
@@ -65,7 +65,7 @@ describe("Choose file functionality with different type of documents test suite"
       .should("be.visible");
   });
 
-  it("Choose file with XSLX file test", () => {
+  it("Enviar arquivo XLSX", () => {
     
     ContactUsPage.getChooseFileBtn().selectFile("cypress/fixtures/" + xlsxFile);
     ContactUsPage.getSubmitBtn().click();
@@ -74,7 +74,7 @@ describe("Choose file functionality with different type of documents test suite"
       .should("be.visible");
   });
 
-  it("Choose file with GIF image test", () => {
+  it("Enviar imagem GIF", () => {
     
     ContactUsPage.getChooseFileBtn().selectFile("cypress/fixtures/" + gifImage);
     ContactUsPage.getSubmitBtn().click();
@@ -83,7 +83,7 @@ describe("Choose file functionality with different type of documents test suite"
       .should("be.visible");
   });
 
-  it("Choose file with mp4 video test", () => {
+  it("Enviar vídeo MP4", () => {
     
     ContactUsPage.getChooseFileBtn().selectFile("cypress/fixtures/" + mp4Video);
     ContactUsPage.getSubmitBtn().click();
@@ -92,7 +92,7 @@ describe("Choose file functionality with different type of documents test suite"
       .should("be.visible");
   });
 
-  it("Choose file with txt file test", () => {
+  it("Enviar arquivo TXT", () => {
     
     ContactUsPage.getChooseFileBtn().selectFile("cypress/fixtures/" + txtFile);
     ContactUsPage.getSubmitBtn().click();
@@ -101,7 +101,7 @@ describe("Choose file functionality with different type of documents test suite"
       .should("be.visible");
   });
 
-  it("Choose file with pptx file test", () => {
+  it("Enviar arquivo PPTX", () => {
     
     ContactUsPage.getChooseFileBtn().selectFile("cypress/fixtures/" + pptFile);
     ContactUsPage.getSubmitBtn().click();
@@ -110,7 +110,7 @@ describe("Choose file functionality with different type of documents test suite"
       .should("be.visible");
   });
 
-  it("Choose file with ZIP file test", () => {
+  it("Enviar arquivo ZIP", () => {
     
     ContactUsPage.getChooseFileBtn().selectFile("cypress/fixtures/" + zipFile);
     ContactUsPage.getSubmitBtn().click();

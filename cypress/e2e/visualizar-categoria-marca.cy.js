@@ -4,9 +4,9 @@ import HeaderPage from "../pages/HeaderPage";
 import AllProductsPage from "../pages/AllProductsPage";
 import BrandsCategoryPage from "../pages/BrandsCategoryPage";
 
-describe("Verify category brands test suite", () => {
+describe("Verificar categorias por marcas", () => {
 
-  it("Verify category brands test", () => {
+  it("Verificar categorias por marcas", () => {
     HeaderPage.getProductsLink().click();
     cy.get("ul.nav.nav-pills.nav-stacked li").should(($lis) => {
       expect($lis).to.have.length(8);

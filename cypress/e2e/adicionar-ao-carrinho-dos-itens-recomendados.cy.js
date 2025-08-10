@@ -3,8 +3,8 @@
 import HomePage from "../pages/HomePage";
 import RecommendedItemsPage from "../pages/RecommendedItemsPage";
 
-describe("Add to cart from recommended items test suite", () => {
-  it("Add to cart from recommended items test", () => {
+describe("Adicionar ao carrinho a partir de itens recomendados", () => {
+  it("Adicionar ao carrinho a partir de itens recomendados", () => {
     HomePage.getRecommendedItemsSection().scrollIntoView();
     cy.get("div.recommended_items")
       .scrollIntoView()

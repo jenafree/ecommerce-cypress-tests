@@ -10,8 +10,8 @@ const itemPrice = 600;
 const loginEmail = "oanabarsan@yahoo.com";
 const loginPassword = "Suceava321!";
 
-describe("Search product and verify cart after login test suite", () => {
-  it("Search product and verify cart after login test", () => {
+describe("Buscar produto e verificar carrinho após login", () => {
+  it("Buscar produto e verificar carrinho após login", () => {
     HeaderPage.getProductsLink().click();
     cy.get("div.features_items h2.title.text-center")
       .scrollIntoView()

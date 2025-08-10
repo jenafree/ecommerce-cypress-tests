@@ -9,9 +9,9 @@ const fullName = faker.person.fullName();
 const randomEmail = faker.internet.email();
 const randomReview = faker.lorem.sentences();
 
-describe("Add review to product test suite", () => {
+describe("Adicionar avaliação ao produto", () => {
 
-  it("Suite de testes: adicionar avaliação de produto", () => {
+  it("Adicionar avaliação de produto", () => {
     HeaderPage.getProductsLink().click();
     cy.get("div.features_items h2.title.text-center")
       .scrollIntoView()

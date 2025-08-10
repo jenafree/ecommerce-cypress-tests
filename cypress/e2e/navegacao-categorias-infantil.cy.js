@@ -3,11 +3,11 @@
 import HomeCategoryLinksPage from "../pages/HomeCategoryLinksPage";
 import AllProductsPage from "../pages/AllProductsPage";
 
-describe("Navigation to Kids categories in home page test suite", () => {
+describe("Navegação nas categorias Infantil (home)", () => {
   beforeEach(() => {
     HomeCategoryLinksPage.getKidsCategoryLink().click();
   });
-  it("Navigate to Dress category test", () => {
+  it("Navegar para a categoria Dress", () => {
     HomeCategoryLinksPage.getKidsDressCategory().click();
     cy.get("div.features_items h2.title.text-center")
       .scrollIntoView()
@@ -21,7 +21,7 @@ describe("Navigation to Kids categories in home page test suite", () => {
         });
       });
   });
-  it("Navigate to Tops & Shirts category test", () => {
+  it("Navegar para a categoria Tops & Shirts", () => {
     HomeCategoryLinksPage.getTopsShirtsCategory().click();
     cy.get("div.features_items h2.title.text-center")
       .scrollIntoView()

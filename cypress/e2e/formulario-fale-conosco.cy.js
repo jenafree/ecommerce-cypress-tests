@@ -9,8 +9,8 @@ const randomSubject = faker.lorem.sentence();
 const randomParagraph = faker.lorem.paragraph();
 const fileName = "463798.jpg";
 
-describe("Contact us form test suite", () => {
-  it("Contact us form test", () => {
+describe("Formulário Fale Conosco", () => {
+  it("Enviar formulário com dados válidos", () => {
     HeaderPage.getContactUsLink().click();
     cy.get("div.col-sm-12 h2")
       .scrollIntoView()
@@ -34,7 +34,7 @@ describe("Contact us form test suite", () => {
       .should("be.visible");
   });
 
-  it("Go to home page after submitting contact us form test", () => {
+  it("Ir para a home após enviar o formulário", () => {
     HeaderPage.getContactUsLink().click();
     cy.get("div.col-sm-12 h2")
       .scrollIntoView()
@@ -60,7 +60,7 @@ describe("Contact us form test suite", () => {
     cy.get('div.col-sm-6 h2').contains('Full-Fledged practice website ').should('be.visible');
   });
 
-  it("Submit form with no name inserted in name field test", () => {
+  it("Enviar sem preencher o nome", () => {
     HeaderPage.getContactUsLink().click();
     cy.get("div.col-sm-12 h2")
       .scrollIntoView()
@@ -83,7 +83,7 @@ describe("Contact us form test suite", () => {
       .should("be.visible");
   });
 
-  it("Submit form with no subject inserted in subject field test", () => {
+  it("Enviar sem preencher o assunto", () => {
     HeaderPage.getContactUsLink().click();
     cy.get("div.col-sm-12 h2")
       .scrollIntoView()
@@ -106,7 +106,7 @@ describe("Contact us form test suite", () => {
       .should("be.visible");
   });
 
-  it("Submit form with no message inserted in message field test", () => {
+  it("Enviar sem preencher a mensagem", () => {
     HeaderPage.getContactUsLink().click();
     cy.get("div.col-sm-12 h2")
       .scrollIntoView()
@@ -129,7 +129,7 @@ describe("Contact us form test suite", () => {
       .should("be.visible");
   });
 
-  it("Submit form with no file attached test", () => {
+  it("Enviar sem anexar arquivo", () => {
     HeaderPage.getContactUsLink().click();
     cy.get("div.col-sm-12 h2")
       .scrollIntoView()
@@ -152,7 +152,7 @@ describe("Contact us form test suite", () => {
       .should("be.visible");
   });
 
-  it("Try to submit form with no email inserted in email field test", () => {
+  it("Tentar enviar sem preencher o email", () => {
     HeaderPage.getContactUsLink().click();
     cy.get("div.col-sm-12 h2")
       .scrollIntoView()
@@ -175,7 +175,7 @@ describe("Contact us form test suite", () => {
       .should("exist");
   });
 
-  it("Try to submit form with no data inserted test", () => {
+  it("Tentar enviar sem preencher nenhum campo", () => {
     HeaderPage.getContactUsLink().click();
     cy.get("div.col-sm-12 h2")
       .scrollIntoView()

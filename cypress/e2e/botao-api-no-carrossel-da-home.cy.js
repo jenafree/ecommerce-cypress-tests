@@ -2,8 +2,8 @@
 
 import TopCarouselHomePage from "../pages/TopCarouselHomePage";
 
-describe("APIs button functionality in carousel home page test suite", () => {
-  it("APIs button functionality located in first carousel image test", () => {
+describe("Funcionalidade do botão APIs no carrossel da home", () => {
+  it("Botão APIs na primeira imagem do carrossel", () => {
     TopCarouselHomePage.getFirstAPIsBtn().click();
     cy.get("div.col-sm-9 h2.title.text-center")
     .scrollIntoView()
@@ -18,7 +18,7 @@ describe("APIs button functionality in carousel home page test suite", () => {
     });
   });
 
-  it("APIs button functionality located in second carousel image test", () => {
+  it("Botão APIs na segunda imagem do carrossel", () => {
     TopCarouselHomePage.getSecondAPIsBtn().click();
     cy.get("div.col-sm-9 h2.title.text-center")
     .scrollIntoView()
@@ -33,7 +33,7 @@ describe("APIs button functionality in carousel home page test suite", () => {
     });
   });
 
-  it("APIs button functionality located in third carousel image test", () => {
+  it("Botão APIs na terceira imagem do carrossel", () => {
     TopCarouselHomePage.getThirdAPIsBtn().click();
     cy.get("div.col-sm-9 h2.title.text-center")
     .scrollIntoView()
