@@ -26,3 +26,7 @@ pnpm-debug.log*
 # Arquivos de sistema
 .DS_Store
 Thumbs.db
+
+# padroniza ignores
+
+# padroniza ignores

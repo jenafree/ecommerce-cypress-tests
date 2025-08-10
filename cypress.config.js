@@ -37,3 +37,7 @@ module.exports = defineConfig({
     },
   },
 });
+
+// normaliza EOF (comentário sem efeito)
+
+// normaliza EOF (comentário sem efeito)
