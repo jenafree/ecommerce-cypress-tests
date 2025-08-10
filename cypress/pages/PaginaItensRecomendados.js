@@ -1,4 +1,4 @@
-class RecommendedItemsPage{
+class PaginaItensRecomendados{
   getRecommendedProduct() {
     return cy.get('div.recommended_items div.productinfo.text-center a[data-product-id="3"]');
    }
@@ -8,4 +8,4 @@ class RecommendedItemsPage{
   }
 }
 
-export default new RecommendedItemsPage();
+export default new PaginaItensRecomendados();

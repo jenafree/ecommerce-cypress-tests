@@ -1,4 +1,4 @@
-class PaymentPage{
+class PaginaPagamento{
   getNameField(){
     return cy.get('input[data-qa="name-on-card"]');
   }
@@ -20,7 +20,7 @@ class PaymentPage{
   }
 
   getConfirmOrderBtn(){
-    return cy.get('button[data-qa="pay-button"]')
+    return cy.get('button[data-qa="pay-button"]');
   }
 
   getDownloadInvoiceBtn(){
@@ -28,4 +28,4 @@ class PaymentPage{
   }
 }
 
-export default new PaymentPage();
+export default new PaginaPagamento();

@@ -1,6 +1,6 @@
 /// <reference types = "cypress" />
 
-import FooterPage from "../pages/FooterPage";
+import FooterPage from '../pages/PaginaRodape';
 
 describe("Rolar para cima usando o botão 'seta'", () => {
   it("Rolar para cima usando o botão 'seta'", () => {

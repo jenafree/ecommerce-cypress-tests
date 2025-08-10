@@ -1,6 +1,6 @@
-class RegisterFormPage{
+class PaginaFormularioRegistro{
   getRegisterTitle(){
-    return cy.get('h2').contains("Enter Account Information");
+    return cy.get('h2').contains('Enter Account Information');
   }
 
   getGenderRadioBtn(){
@@ -67,7 +67,7 @@ class RegisterFormPage{
   }
 
   getZipCode(){
-    return cy.get('input[data-qa="zipcode"]')
+    return cy.get('input[data-qa="zipcode"]');
   }
 
   getPhoneNumber(){
@@ -83,4 +83,4 @@ class RegisterFormPage{
   }
 }
 
-export default new RegisterFormPage();
+export default new PaginaFormularioRegistro();

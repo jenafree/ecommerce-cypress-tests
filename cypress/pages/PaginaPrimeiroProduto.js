@@ -1,4 +1,4 @@
-class FirstProductPage{
+class PaginaPrimeiroProduto{
   getNameField(){
     return cy.get('input[id="name"]');
   }
@@ -16,4 +16,4 @@ class FirstProductPage{
   }
 }
 
-export default new FirstProductPage();
+export default new PaginaPrimeiroProduto();
