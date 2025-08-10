@@ -1,4 +1,4 @@
-class BrandsCategoryPage{
+class PaginaCategoriaMarcas{
   getPoloBrandLink(){
     return cy.get("ul.nav.nav-pills.nav-stacked li a[href='/brand_products/Polo']");
   }
@@ -32,4 +32,4 @@ class BrandsCategoryPage{
   }
 }
 
-export default new BrandsCategoryPage();
+export default new PaginaCategoriaMarcas();

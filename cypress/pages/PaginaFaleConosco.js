@@ -1,4 +1,4 @@
-class ContactUsPage{
+class PaginaFaleConosco{
 
   getNameField(){
     return cy.get('input[data-qa="name"]');
@@ -30,4 +30,4 @@ class ContactUsPage{
 
 }
 
-export default new ContactUsPage();
+export default new PaginaFaleConosco();

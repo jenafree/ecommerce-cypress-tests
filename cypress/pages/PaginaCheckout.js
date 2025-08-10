@@ -1,4 +1,4 @@
-class CheckoutPage{
+class PaginaCheckout{
   getMessageField(){
     return cy.get('textarea[name="message"]');
   }
@@ -8,4 +8,4 @@ class CheckoutPage{
   }
 }
 
-export default new CheckoutPage();
+export default new PaginaCheckout();

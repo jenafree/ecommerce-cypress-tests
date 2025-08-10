@@ -1,10 +1,10 @@
-class FooterPage{
+class PaginaRodape{
   getFooter(){
-    return cy.get("div.footer-widget");
+    return cy.get('div.footer-widget');
   }
   
   getSubscribeField(){
-    return cy.get("#susbscribe_email");
+    return cy.get('#susbscribe_email');
   }
 
   getSubscribeBtn(){
@@ -21,4 +21,4 @@ class FooterPage{
 
 }
 
-export default new FooterPage();
+export default new PaginaRodape();

@@ -1,4 +1,4 @@
-class ThirdProductPage{
+class PaginaTerceiroProduto{
   getProductQuantity(){
     return cy.get('input[id="quantity"]');
   }
@@ -17,4 +17,4 @@ class ThirdProductPage{
 
 }
 
-export default new ThirdProductPage();
+export default new PaginaTerceiroProduto();

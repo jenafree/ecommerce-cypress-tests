@@ -1,5 +1,5 @@
-import HeaderPage from "./HeaderPage";
-class AuthPage{
+import HeaderPage from './PaginaCabecalho';
+class PaginaAutenticacao{
   getSignupTitle(){
     return cy.get('h2').contains('New User Signup!');
   }
@@ -34,11 +34,11 @@ class AuthPage{
 
   login(loginEmail, loginPassword) {
     HeaderPage.getSignupLink().click();
-    this.getLoginTitle().should("exist");
+    this.getLoginTitle().should('exist');
     this.getLoginEmail().type(loginEmail, { delay: 0 });
     this.getLoginPassword().type(loginPassword, { delay: 0 });
     this.getLoginBtn().click();
   }
 }
 
-export default new AuthPage();
+export default new PaginaAutenticacao();

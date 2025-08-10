@@ -1,4 +1,4 @@
-class HomeCategoryLinksPage{
+class PaginaLinksCategoriasHome{
   getWomenCategoryLink(){
     return cy.get('h4 a[href="#Women"] span');
   }
@@ -40,4 +40,4 @@ class HomeCategoryLinksPage{
   }
 }
 
-export default new HomeCategoryLinksPage();
+export default new PaginaLinksCategoriasHome();
