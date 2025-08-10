@@ -3,11 +3,11 @@
 import HomeCategoryLinksPage from "../pages/HomeCategoryLinksPage";
 import AllProductsPage from "../pages/AllProductsPage";
 
-describe("Navigation to Men categories in home page test suite", () => {
+describe("Navegação nas categorias Masculino (home)", () => {
   beforeEach(() => {
     HomeCategoryLinksPage.getMenCategoryLink().click();
   });
-  it("Navigate to TShirts category test", () => {
+  it("Navegar para a categoria T-Shirts", () => {
     HomeCategoryLinksPage.getTShirtsCategory().click();
     cy.get("div.features_items h2.title.text-center")
       .scrollIntoView()
@@ -21,7 +21,7 @@ describe("Navigation to Men categories in home page test suite", () => {
         });
       });
   });
-  it("Navigate to Jeans category test", () => {
+  it("Navegar para a categoria Jeans", () => {
     HomeCategoryLinksPage.getJeansCategory().click();
     cy.get("div.features_items h2.title.text-center")
       .scrollIntoView()

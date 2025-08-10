@@ -7,15 +7,15 @@ import HeaderPage from "../pages/HeaderPage";
  const email = faker.internet.email();
  const invalidEmail = "invalidemail@"
 
-describe("Subscribe to newsletter test suite", () => {
-  it("Subscribe to newsletter in home page with valid email test", () => {
+describe("Assinar newsletter", () => {
+  it("Assinar newsletter na página inicial com email válido", () => {
     FooterPage.getFooter().scrollIntoView();
     FooterPage.getSubscribeField().type(email);
     FooterPage.getSubscribeBtn().click();
     cy.get('div.alert-success.alert').contains('You have been successfully subscribed!').should('be.visible');
   });
 
-  it("Try to subscribe to newsletter in home page using invalid email test", () => {
+  it("Tentar assinar newsletter na página inicial com email inválido", () => {
     FooterPage.getFooter().scrollIntoView();
     FooterPage.getSubscribeField().type(invalidEmail);
     FooterPage.getSubscribeBtn().click();
@@ -24,7 +24,7 @@ describe("Subscribe to newsletter test suite", () => {
   .should('exist');
   });
 
-  it("Subscribe to newsletter in cart page using valid email test", () => {
+  it("Assinar newsletter no carrinho com email válido", () => {
     HeaderPage.getCartLink().click();
     FooterPage.getFooter().scrollIntoView();
     FooterPage.getSubscribeField().type(email);
@@ -32,7 +32,7 @@ describe("Subscribe to newsletter test suite", () => {
     cy.get('div.alert-success.alert').contains('You have been successfully subscribed!').should('be.visible');
   });
 
-  it("Try to subscribe to newsletter in cart page using invalid email test", () => {
+  it("Tentar assinar newsletter no carrinho com email inválido", () => {
     HeaderPage.getCartLink().click();
     FooterPage.getFooter().scrollIntoView();
     FooterPage.getSubscribeField().type(invalidEmail);

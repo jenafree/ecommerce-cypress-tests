@@ -46,9 +46,9 @@ const cardCVC = faker.finance.creditCardCVV();
 const randomMonthNumber = Math.floor(Math.random() * 12) + 1;
 const randomYearNumber = faker.helpers.rangeToNumber({ min: new Date().getFullYear() , max: 2030 })
 
-describe("Place order and register while checkout test suite", () => {
+describe("Fazer pedido e registrar durante o checkout", () => {
 
-  it("Place order and register while checkout test", () => {
+  it("Fazer pedido e registrar durante o checkout", () => {
     HeaderPage.getProductsLink().click();
     AllProductsPage.getAddFirstProduct().click();
     AllProductsPage.getContinueShoppingBtn().click();

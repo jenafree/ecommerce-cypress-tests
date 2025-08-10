@@ -8,15 +8,15 @@ const loginPassword = "Suceava321!";
 const incorrectEmail = faker.internet.email();
 const incorrectPassword = faker.internet.password();
 
-describe("Login user test suite", () => {
-  it("Log in test", () => {
+describe("Login do usuário", () => {
+  it("Fazer login", () => {
     AuthPage.login(loginEmail, loginPassword);
     cy.get("ul.nav.navbar-nav li:nth-child(10)")
       .contains(` Logged in as `)
       .should("be.visible");
   });
 
-  it("Log out test", () => {
+  it("Fazer logout", () => {
     AuthPage.login(loginEmail, loginPassword);
     cy.get("ul.nav.navbar-nav li:nth-child(10)")
       .contains(` Logged in as `)
@@ -27,7 +27,7 @@ describe("Login user test suite", () => {
       .should("be.visible");
   });
 
-  it("Try to log in with invalid email and password test", () => {
+  it("Tentar login com email e senha inválidos", () => {
     AuthPage.login(incorrectEmail, incorrectPassword);
     AuthPage.getLoginBtn().click();
     cy.get('form[action="/login"] p')
@@ -35,7 +35,7 @@ describe("Login user test suite", () => {
       .should("be.visible");
   });
 
-  it("Try to log in with invalid email and valid password test", () => {
+  it("Tentar login com email inválido e senha válida", () => {
     AuthPage.login(incorrectEmail, loginPassword);
     AuthPage.getLoginBtn().click();
     cy.get('form[action="/login"] p')
@@ -43,7 +43,7 @@ describe("Login user test suite", () => {
       .should("be.visible");
   });
 
-  it("Try to log in with valid email and invalid password test", () => {
+  it("Tentar login com email válido e senha inválida", () => {
     AuthPage.login(loginEmail, incorrectPassword);
     AuthPage.getLoginBtn().click();
     cy.get('form[action="/login"] p')
@@ -51,7 +51,7 @@ describe("Login user test suite", () => {
       .should("be.visible");
   });
 
-  it("Try to log in with only email inserted in email field test", () => {
+  it("Tentar login preenchendo apenas o email", () => {
     HeaderPage.getSignupLink().click();
     AuthPage.getLoginTitle().should("exist");
     AuthPage.getLoginEmail().type(loginEmail, { delay: 0 });
@@ -61,7 +61,7 @@ describe("Login user test suite", () => {
       .should("exist");
   });
   
-  it("Try to log in with only password inserted in password field test", () => {
+  it("Tentar login preenchendo apenas a senha", () => {
     HeaderPage.getSignupLink().click();
     AuthPage.getLoginTitle().should("exist");
     AuthPage.getLoginPassword().type(loginPassword, { delay: 0 });
@@ -71,7 +71,7 @@ describe("Login user test suite", () => {
       .should("exist");
   });
 
-  it("Try to log in with no data inserted in login fields test", () => {
+  it("Tentar login sem preencher os campos", () => {
     HeaderPage.getSignupLink().click();
     AuthPage.getLoginTitle().should("exist");
     AuthPage.getLoginBtn().click();

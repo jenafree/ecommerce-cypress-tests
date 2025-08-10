@@ -3,9 +3,9 @@
 import HeaderPage from "../pages/HeaderPage";
 import AllProductsPage from "../pages/AllProductsPage";
 
-describe("Verify All products detail page test suite", () => {
+describe("Verificar detalhes da página de todos os produtos", () => {
 
-  it("Verify that detail detail is visible: product name, category, price, availability, condition, brand", () => {
+  it("Verificar se detalhes estão visíveis: nome, categoria, preço, disponibilidade, condição e marca", () => {
     HeaderPage.getProductsLink().click();
     cy.get('div.features_items h2.title.text-center')
   .scrollIntoView()

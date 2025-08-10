@@ -3,11 +3,11 @@
 import HomeCategoryLinksPage from "../pages/HomeCategoryLinksPage";
 import AllProductsPage from "../pages/AllProductsPage";
 
-describe("Navigation to Women categories in home page test suite", () => {
+describe("Navegação nas categorias Feminino (home)", () => {
   beforeEach(() => {
     HomeCategoryLinksPage.getWomenCategoryLink().click();
   });
-  it("Navigate to Dress category test", () => {
+  it("Navegar para a categoria Dress", () => {
     HomeCategoryLinksPage.getDressCategory().click();
     cy.get("div.features_items h2.title.text-center")
       .scrollIntoView()
@@ -21,7 +21,7 @@ describe("Navigation to Women categories in home page test suite", () => {
         });
       });
   });
-  it("Navigate to Tops category test", () => {
+  it("Navegar para a categoria Tops", () => {
     HomeCategoryLinksPage.getTopsCategory().click();
     cy.get("div.features_items h2.title.text-center")
       .scrollIntoView()
@@ -35,7 +35,7 @@ describe("Navigation to Women categories in home page test suite", () => {
         });
       });
   });
-  it("Navigate to Saree category test", () => {
+  it("Navegar para a categoria Saree", () => {
     HomeCategoryLinksPage.getSareeCategory().click();
     cy.get("div.features_items h2.title.text-center")
       .scrollIntoView()

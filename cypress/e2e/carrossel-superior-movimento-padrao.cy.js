@@ -2,8 +2,8 @@
 
 import TopCarouselHomePage from "../pages/TopCarouselHomePage";
 
-describe("Default carousel movement functionality test suite", () => {
-  it("Default carousel movement test", () => {
+describe("Funcionalidade de movimento padrão do carrossel", () => {
+  it("Movimento padrão do carrossel", () => {
     cy.clock();
     TopCarouselHomePage.getTopCarousel()
       .find("div.item.active")

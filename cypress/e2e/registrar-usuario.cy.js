@@ -34,8 +34,8 @@ const randomZipCode = faker.location.zipCode();
 const randomPhoneNumber = faker.phone.number();
 const invalidEmail = "oanabarsan";
 
-describe("Register user test suite", () => {
-  it("Register with valid credentials test", () => {
+describe("Registrar usuário", () => {
+  it("Registrar com credenciais válidas", () => {
     HeaderPage.getSignupLink().click();
     AuthPage.getSignupTitle().should("exist");
     AuthPage.getNameField().type(fullName, { delay: 0 });
@@ -72,7 +72,7 @@ describe("Register user test suite", () => {
       .should("be.visible");
   });
 
-  it("Log out after register test", () => {
+  it("Fazer logout após registrar", () => {
     HeaderPage.getSignupLink().click();
     AuthPage.getSignupTitle().should("exist");
     AuthPage.getNameField().type(fullName, { delay: 0 });
@@ -113,7 +113,7 @@ describe("Register user test suite", () => {
       .should("be.visible");
   });
 
-  it("Try to register with existing email test", () => {
+  it("Tentar registrar com email existente", () => {
     HeaderPage.getSignupLink().click();
     AuthPage.getSignupTitle().should("exist");
     AuthPage.getNameField().type(fullName, { delay: 0 });
@@ -124,7 +124,7 @@ describe("Register user test suite", () => {
       .should("be.visible");
   });
 
-  it("Try to register with invalid email test", () => {
+  it("Tentar registrar com email inválido", () => {
     HeaderPage.getSignupLink().click();
     AuthPage.getSignupTitle().should("exist");
     AuthPage.getNameField().type(fullName, { delay: 0 });
@@ -135,7 +135,7 @@ describe("Register user test suite", () => {
       .should("exist");
   });
 
-  it("Try to register with no input data inserted test", () => {
+  it("Tentar registrar sem preencher os campos", () => {
     HeaderPage.getSignupLink().click();
     AuthPage.getSignupTitle().should("exist");
     AuthPage.getSubmitBtn().click();
@@ -144,7 +144,7 @@ describe("Register user test suite", () => {
       .should("exist");
   });
 
-  it("Try to register with only name inserted in name field test", () => {
+  it("Tentar registrar preenchendo apenas o nome", () => {
     HeaderPage.getSignupLink().click();
     AuthPage.getSignupTitle().should("exist");
     AuthPage.getNameField().type(fullName, { delay: 0 });
@@ -154,7 +154,7 @@ describe("Register user test suite", () => {
       .should("exist");
   });
 
-  it("Try to register with only email inserted in email field test", () => {
+  it("Tentar registrar preenchendo apenas o email", () => {
     HeaderPage.getSignupLink().click();
     AuthPage.getSignupTitle().should("exist");
     AuthPage.getEmailField().type(randomEmail, { delay: 0 });
@@ -164,7 +164,7 @@ describe("Register user test suite", () => {
       .should("exist");
   });
 
-  it("Try to register with no password inserted in password field test", () => {
+  it("Tentar registrar sem preencher a senha", () => {
     HeaderPage.getSignupLink().click();
     AuthPage.getSignupTitle().should("exist");
     AuthPage.getNameField().type(fullName, { delay: 0 });
@@ -194,7 +194,7 @@ describe("Register user test suite", () => {
       .should("exist");
   });
 
-  it("Try to register with no first name inserted in first name field for address section test", () => {
+  it("Tentar registrar sem preencher o primeiro nome (seção endereço)", () => {
     HeaderPage.getSignupLink().click();
     AuthPage.getSignupTitle().should("exist");
     AuthPage.getNameField().type(fullName, { delay: 0 });
@@ -223,7 +223,7 @@ describe("Register user test suite", () => {
       .invoke("prop", "validationMessage")
       .should("exist");
   });
-  it("Try to register with no last name inserted in last name field for address information section test", () => {
+  it("Tentar registrar sem preencher o sobrenome (seção endereço)", () => {
     HeaderPage.getSignupLink().click();
     AuthPage.getSignupTitle().should("exist");
     AuthPage.getNameField().type(fullName, { delay: 0 });
@@ -253,7 +253,7 @@ describe("Register user test suite", () => {
       .should("exist");
   });
 
-  it("Try to register with no state inserted in state field in address information section test", () => {
+  it("Tentar registrar sem preencher o estado (seção endereço)", () => {
     HeaderPage.getSignupLink().click();
     AuthPage.getSignupTitle().should("exist");
     AuthPage.getNameField().type(fullName, { delay: 0 });
@@ -283,7 +283,7 @@ describe("Register user test suite", () => {
     .should("exist");
   });
 
-  it("Try to register with no city inserted in city field for address information section test", () => {
+  it("Tentar registrar sem preencher a cidade (seção endereço)", () => {
     HeaderPage.getSignupLink().click();
     AuthPage.getSignupTitle().should("exist");
     AuthPage.getNameField().type(fullName, { delay: 0 });
@@ -313,7 +313,7 @@ describe("Register user test suite", () => {
     .should("exist");
   });
 
-  it("Try to register user with no zipcode inserted in zipcode field for addredd information section test", () => {
+  it("Tentar registrar sem preencher o CEP (seção endereço)", () => {
     HeaderPage.getSignupLink().click();
     AuthPage.getSignupTitle().should("exist");
     AuthPage.getNameField().type(fullName, { delay: 0 });
@@ -343,7 +343,7 @@ describe("Register user test suite", () => {
     .should("exist");
   });
 
-  it("Try to register with no mobile phone number inserted in mobile phone field for address information section test", () => {
+  it("Tentar registrar sem preencher o celular (seção endereço)", () => {
     HeaderPage.getSignupLink().click();
     AuthPage.getSignupTitle().should("exist");
     AuthPage.getNameField().type(fullName, { delay: 0 });
@@ -373,7 +373,7 @@ describe("Register user test suite", () => {
     .should("exist");
   });
 
-  it("Try to register with no required field filled test", () => {
+  it("Tentar registrar sem preencher campos obrigatórios", () => {
     HeaderPage.getSignupLink().click();
     AuthPage.getSignupTitle().should("exist");
     AuthPage.getNameField().type(fullName, { delay: 0 });

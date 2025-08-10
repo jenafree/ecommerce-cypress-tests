@@ -3,8 +3,8 @@
 import AllProductsPage from "../pages/AllProductsPage";
 import BrandsCategoryPage from "../pages/BrandsCategoryPage";
 
-describe("Navigation to Brands categories in home page test suite", () => {
-  it("Navigate to Polo category test", () => {
+describe("Navegação para categorias por marca (home)", () => {
+  it("Navegar para a marca Polo", () => {
     BrandsCategoryPage.getPoloBrandLink().click();
     cy.get("div.features_items h2.title.text-center")
       .scrollIntoView()
@@ -19,7 +19,7 @@ describe("Navigation to Brands categories in home page test suite", () => {
       });
   });
 
-  it("Navigate to H&M category test", () => {
+  it("Navegar para a marca H&M", () => {
     BrandsCategoryPage.getHnMBrandLink().click();
     cy.get("div.features_items h2.title.text-center")
       .scrollIntoView()
@@ -34,7 +34,7 @@ describe("Navigation to Brands categories in home page test suite", () => {
       });
   });
 
-  it("Navigate to Madame category test", () => {
+  it("Navegar para a marca Madame", () => {
     BrandsCategoryPage.getMadameBrandLink().click();
     cy.get("div.features_items h2.title.text-center")
       .scrollIntoView()
@@ -48,7 +48,7 @@ describe("Navigation to Brands categories in home page test suite", () => {
         });
       });
   });
-  it("Navigate to Mast & Harbour category test", () => {
+  it("Navegar para a marca Mast & Harbour", () => {
     BrandsCategoryPage.getMastAndHarbourBrandLink().click();
     cy.get("div.features_items h2.title.text-center")
       .scrollIntoView()
@@ -63,7 +63,7 @@ describe("Navigation to Brands categories in home page test suite", () => {
       });
   });
 
-  it("Navigate to Babyhug category test", () => {
+  it("Navegar para a marca Babyhug", () => {
     BrandsCategoryPage.getBabyhugBrandLink().click();
     cy.get("div.features_items h2.title.text-center")
       .scrollIntoView()
@@ -78,7 +78,7 @@ describe("Navigation to Brands categories in home page test suite", () => {
       });
   });
 
-  it("Navigate to Allen Solly Junior category test", () => {
+  it("Navegar para a marca Allen Solly Junior", () => {
     BrandsCategoryPage.getAllenSollyJuniorBrandLink().click();
     cy.get("div.features_items h2.title.text-center")
       .scrollIntoView()
@@ -93,7 +93,7 @@ describe("Navigation to Brands categories in home page test suite", () => {
       });
   });
 
-  it("Navigate to Kookie Kids category test", () => {
+  it("Navegar para a marca Kookie Kids", () => {
     BrandsCategoryPage.getKookieKidsBrandLink().click();
     cy.get("div.features_items h2.title.text-center")
       .scrollIntoView()
@@ -108,7 +108,7 @@ describe("Navigation to Brands categories in home page test suite", () => {
       });
   });
 
-  it("Navigate to Biba category test", () => {
+  it("Navegar para a marca Biba", () => {
     BrandsCategoryPage.getBibaBrandLink().click();
     cy.get("div.features_items h2.title.text-center")
       .scrollIntoView()

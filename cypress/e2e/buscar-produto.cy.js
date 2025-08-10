@@ -3,8 +3,8 @@
 import HeaderPage from "../pages/HeaderPage";
 import AllProductsPage from "../pages/AllProductsPage";
 
-describe("Search product test suite", () => {
-  it("Search product by an existing product keyword", () => {
+describe("Buscar produto", () => {
+  it("Buscar produto por palavra-chave existente", () => {
     HeaderPage.getProductsLink().click();
     cy.get("div.features_items h2.title.text-center")
       .scrollIntoView()

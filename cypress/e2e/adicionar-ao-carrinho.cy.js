@@ -6,9 +6,9 @@ import AllProductsPage from "../pages/AllProductsPage";
 const priceFirstItem = 500;
 const priceSecondItem = 400;
 
-describe("Add to cart test suite", () => {
+describe("Adicionar ao carrinho", () => {
 
-  it("Add to cart first and second product test", () => {
+  it("Adicionar ao carrinho o primeiro e o segundo produto", () => {
     HeaderPage.getProductsLink().click();
     cy.get("div.features_items h2.title.text-center")
       .scrollIntoView()
